@@ -1,3 +1,5 @@
+NOTE: This branch is based off v54 of upstream, with some audit log field additions.
+
 # go-github #
 
 [![go-github release (latest SemVer)](https://img.shields.io/github/v/release/google/go-github?sort=semver)](https://github.com/google/go-github/releases)
