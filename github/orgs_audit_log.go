@@ -129,6 +129,11 @@ type AuditEntry struct {
 type AuditEntryData struct {
 	OldName  *string `json:"old_name,omitempty"`  // The previous name of the repository, for a name change
 	OldLogin *string `json:"old_login,omitempty"` // The previous name of the organization, for a name change
+
+	OwnerIsOrg  *bool   `json:"owner_is_org,omitempty`   // The new owner is an organization, in the case of a transfer
+	OwnerWasOrg *bool   `json:"owner_was_org,omitempty"` // The previous owner was an organization, in the case of a transfer
+	OldUser     *string `json:"old_user,omitempty"`      // The previous name of the user/organization, in the case of a transfer
+	RepoWas     *string `json:"repo_was,omitempty"`      // The previous full name of the repository (including owner), in the case of a transfer
 }
 
 // GetAuditLog gets the audit-log entries for an organization.
