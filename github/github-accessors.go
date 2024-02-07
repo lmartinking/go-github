@@ -1630,6 +1630,38 @@ func (a *AuditEntryData) GetOldName() string {
 	return *a.OldName
 }
 
+// GetOldUser returns the OldUser field if it's non-nil, zero value otherwise.
+func (a *AuditEntryData) GetOldUser() string {
+	if a == nil || a.OldUser == nil {
+		return ""
+	}
+	return *a.OldUser
+}
+
+// GetOwnerIsOrg returns the OwnerIsOrg field if it's non-nil, zero value otherwise.
+func (a *AuditEntryData) GetOwnerIsOrg() bool {
+	if a == nil || a.OwnerIsOrg == nil {
+		return false
+	}
+	return *a.OwnerIsOrg
+}
+
+// GetOwnerWasOrg returns the OwnerWasOrg field if it's non-nil, zero value otherwise.
+func (a *AuditEntryData) GetOwnerWasOrg() bool {
+	if a == nil || a.OwnerWasOrg == nil {
+		return false
+	}
+	return *a.OwnerWasOrg
+}
+
+// GetRepoWas returns the RepoWas field if it's non-nil, zero value otherwise.
+func (a *AuditEntryData) GetRepoWas() string {
+	if a == nil || a.RepoWas == nil {
+		return ""
+	}
+	return *a.RepoWas
+}
+
 // GetApp returns the App field.
 func (a *Authorization) GetApp() *AuthorizationApp {
 	if a == nil {

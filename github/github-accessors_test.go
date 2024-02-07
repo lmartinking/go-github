@@ -1951,6 +1951,46 @@ func TestAuditEntryData_GetOldName(tt *testing.T) {
 	a.GetOldName()
 }
 
+func TestAuditEntryData_GetOldUser(tt *testing.T) {
+	var zeroValue string
+	a := &AuditEntryData{OldUser: &zeroValue}
+	a.GetOldUser()
+	a = &AuditEntryData{}
+	a.GetOldUser()
+	a = nil
+	a.GetOldUser()
+}
+
+func TestAuditEntryData_GetOwnerIsOrg(tt *testing.T) {
+	var zeroValue bool
+	a := &AuditEntryData{OwnerIsOrg: &zeroValue}
+	a.GetOwnerIsOrg()
+	a = &AuditEntryData{}
+	a.GetOwnerIsOrg()
+	a = nil
+	a.GetOwnerIsOrg()
+}
+
+func TestAuditEntryData_GetOwnerWasOrg(tt *testing.T) {
+	var zeroValue bool
+	a := &AuditEntryData{OwnerWasOrg: &zeroValue}
+	a.GetOwnerWasOrg()
+	a = &AuditEntryData{}
+	a.GetOwnerWasOrg()
+	a = nil
+	a.GetOwnerWasOrg()
+}
+
+func TestAuditEntryData_GetRepoWas(tt *testing.T) {
+	var zeroValue string
+	a := &AuditEntryData{RepoWas: &zeroValue}
+	a.GetRepoWas()
+	a = &AuditEntryData{}
+	a.GetRepoWas()
+	a = nil
+	a.GetRepoWas()
+}
+
 func TestAuthorization_GetApp(tt *testing.T) {
 	a := &Authorization{}
 	a.GetApp()
